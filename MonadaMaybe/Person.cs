@@ -43,34 +43,4 @@ namespace MonadaMaybe
 		}
 
 	}
-
-	public class Person
-	{
-		public PaymentCredantials PaymentCredantials { get; set; }
-	}
-
-	public class PaymentCredantials
-	{
-
-		public string cardType { get; set; }
-		public DateTime dateEnd { get; set; }
-		public string cardNumbe { get; set; }
-		public int CVV { get; set; }
-	}
-
-	public class App
-	{
-		public App() { }
-
-		public bool HasValidCardType(Person person)
-		{
-			return person
-				.With(p => p.PaymentCredantials)
-				.With(c => c.cardType)
-				.If(c => c.Length > 4)
-				.Do(Console.WriteLine)
-				.ReturnSuccess();
-		}
-
-	}
 }
