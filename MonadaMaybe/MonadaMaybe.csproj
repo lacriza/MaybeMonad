@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CredentialsChecker.cs" />
+    <Compile Include="ObjModels\PaymentCredantials.cs" />
+    <Compile Include="ObjModels\Person.cs" />
+    <Compile Include="Maybe.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
